@@ -2,8 +2,9 @@ import React, {Component} from 'react'
 import classes from './Drawer.css'
 import BackDrop from "../UI/BackDrop/BackDrop";
 
+
 const lists = [
-    1, 2, 3
+    'home', 'quiz-list', 'settings'
 ]
 
 class Drawer extends Component {
@@ -12,7 +13,7 @@ class Drawer extends Component {
         return lists.map((list, index) => {
             return (
                 <li key={index}>
-                    <a>list {list}</a>
+                    <a href={'/' + list}>list {list}</a>
                 </li>
             )
         })
