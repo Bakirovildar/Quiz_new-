@@ -4,7 +4,9 @@ import BackDrop from "../UI/BackDrop/BackDrop";
 
 
 const lists = [
-    'home', 'quiz-list', 'settings'
+    {path: 'quiz-list', name: 'Список тестов'},
+    {path: 'home', name: 'Авторизация'},
+    {path: 'settings', name: 'Создание теста'}
 ]
 
 class Drawer extends Component {
@@ -13,7 +15,7 @@ class Drawer extends Component {
         return lists.map((list, index) => {
             return (
                 <li key={index}>
-                    <a href={'/' + list}>list {list}</a>
+                    <a href={'/' + list.path}>{list.name}</a>
                 </li>
             )
         })
