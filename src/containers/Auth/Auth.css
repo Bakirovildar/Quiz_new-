@@ -9,6 +9,7 @@
 
 .AuthForm {
     background: lightgray;
+    width: 600px;
     padding: 25px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
     border-radius: 5px;
