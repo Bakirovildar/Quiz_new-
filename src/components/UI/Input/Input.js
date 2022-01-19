@@ -1,7 +1,7 @@
 import React from "react";
 import classes from './Input.css'
 
-function isValid({valid, touched, shouldValidate}) {
+function isInvalid({valid, touched, shouldValidate}) {
     return !valid && shouldValidate && touched
 }
 
@@ -10,7 +10,7 @@ const Input = props => {
     const inputType = props.type || 'text'
     const htmlFor = `${inputType}-${Math.random()}`
 
-    if (isValid(props)) {
+    if (isInvalid(props)) {
         cls.push(classes.invalid)
     }
 
@@ -24,7 +24,7 @@ const Input = props => {
                 onChange={props.onChange}
             />
 
-            {isValid(props) ? <span>{props.errorMessage || 'Введите корректные данные'}</span> : null}
+            {isInvalid(props) ? <span>{props.errorMessage || 'Введите корректные данные'}</span> : null}
 
         </div>
     )
